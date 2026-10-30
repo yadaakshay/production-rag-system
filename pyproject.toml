@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "production-rag-system"
+version = "1.0.0"
+authors = [
+  { name = "Akshay Yada", email = "23ee01065@iitbbs.ac.in" },
+]
+description = "A modular, enterprise-grade Retrieval-Augmented Generation (RAG) system featuring hybrid retrieval, cross-encoder reranking, query transformations, and automated Ragas evaluation."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "pydantic>=2.0.0",
+    "pyyaml>=6.0",
+    "python-dotenv>=1.0.0",
+    "rich>=13.0.0",
+    "numpy>=1.24.0",
+    "rank-bm25>=0.2.2",
+    "sentence-transformers>=3.0.0",
+    "pypdf>=4.0.0",
+    "tiktoken>=0.7.0",
+    "streamlit>=1.35.0",
+    "requests>=2.31.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/akshayyada/production-rag-system"
+"Bug Tracker" = "https://github.com/akshayyada/production-rag-system/issues"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+pythonpath = ["."]

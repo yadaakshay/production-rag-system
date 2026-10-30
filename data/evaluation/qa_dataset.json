@@ -1,0 +1,50 @@
+[
+  {
+    "id": "q1",
+    "question": "What is the replication factor used for Apache Kafka partitioned topics?",
+    "ground_truth": "The replication factor for partitioned Kafka topics is 3 across availability zones to guarantee durability.",
+    "document": "cloud_native_architecture.md"
+  },
+  {
+    "id": "q2",
+    "question": "How long is the circuit breaker reset timeout in the OPEN state before transitioning to HALF-OPEN?",
+    "ground_truth": "When tripped into the OPEN state, the circuit breaker remains open for 30 seconds before entering the HALF-OPEN state.",
+    "document": "cloud_native_architecture.md"
+  },
+  {
+    "id": "q3",
+    "question": "What are the two tiers in the distributed caching layer and their respective TTLs or policies?",
+    "ground_truth": "The caching hierarchy consists of an L1 in-process LRU cache (Caffeine) with a 60-second TTL, and an L2 clustered Redis deployment with replica failover using the Cache-Aside pattern.",
+    "document": "cloud_native_architecture.md"
+  },
+  {
+    "id": "q4",
+    "question": "What protocol and token standards are used for internal and external authentication?",
+    "ground_truth": "Internal service-to-service communication uses mTLS via Istio, while external client requests use asymmetric RS256 JWT tokens issued by OAuth 2.0 / OIDC.",
+    "document": "cloud_native_architecture.md"
+  },
+  {
+    "id": "q5",
+    "question": "What was the total consolidated revenue of Nexa Global Technologies in fiscal year 2025 and what was the growth rate?",
+    "ground_truth": "Consolidated revenue was $428.6 million, representing a 24.3% year-over-year expansion compared to $344.8 million in 2024.",
+    "document": "annual_financial_report.txt"
+  },
+  {
+    "id": "q6",
+    "question": "How much revenue was generated specifically by AI & Data Analytics Platforms?",
+    "ground_truth": "AI & Data Analytics Platforms generated $112.7 million (26.3% of total revenue) with a 68.2% annual growth rate.",
+    "document": "annual_financial_report.txt"
+  },
+  {
+    "id": "q7",
+    "question": "What was the Adjusted EBITDA and Adjusted EBITDA margin for fiscal year 2025?",
+    "ground_truth": "Adjusted EBITDA rose to $124.2 million, delivering an Adjusted EBITDA margin of 29.0%.",
+    "document": "annual_financial_report.txt"
+  },
+  {
+    "id": "q8",
+    "question": "What is the revenue guidance range provided by management for fiscal year 2026?",
+    "ground_truth": "Management projects fiscal year 2026 total revenue between $515 million and $530 million.",
+    "document": "annual_financial_report.txt"
+  }
+]

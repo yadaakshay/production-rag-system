@@ -1,0 +1,26 @@
+NEXA GLOBAL TECHNOLOGIES INC.
+ANNUAL FINANCIAL REPORT & OPERATIONAL REVIEW - FISCAL YEAR 2025
+
+1. FINANCIAL HIGHLIGHTS & REVENUE PERFORMANCE
+In fiscal year 2025, Nexa Global Technologies achieved total consolidated revenue of $428.6 million, representing a 24.3% year-over-year expansion compared to $344.8 million in fiscal year 2024.
+- Cloud Infrastructure & Enterprise SaaS accounted for $265.4 million (61.9% of total revenue).
+- AI & Data Analytics Platforms generated $112.7 million (26.3% of total revenue), registering a 68.2% annual growth rate.
+- Professional Consulting Services contributed $50.5 million (11.8% of total revenue).
+
+2. OPERATING MARGINS AND PROFITABILITY
+Gross profit for the fiscal year reached $312.8 million, delivering a gross margin of 73.0%, up from 69.8% in fiscal year 2024 due to infrastructure cost optimizations and favorable cloud provider volume discounts.
+Operating expenses totaled $218.4 million:
+- Research and Development (R&D): $98.2 million (22.9% of total revenue), focused on proprietary foundation models and low-latency inference pipelines.
+- Sales and Marketing (S&M): $82.6 million (19.3% of total revenue).
+- General and Administrative (G&A): $37.6 million (8.8% of total revenue).
+Adjusted EBITDA rose to $124.2 million, yielding an Adjusted EBITDA margin of 29.0%.
+
+3. BALANCE SHEET & CASH FLOW DISCLOSURES
+As of December 31, 2025, Nexa maintained $184.5 million in cash and cash equivalents, with no outstanding long-term debt obligations.
+Free cash flow (FCF) generated during the period was $89.3 million, enabling a $35.0 million share repurchase program authorized by the Board of Directors in Q3 2025.
+
+4. CAPITAL EXPENDITURE & INFRASTRUCTURE INVESTMENTS
+Capital expenditures (CapEx) for 2025 were $38.7 million, primarily allocated to acquiring dedicated GPU compute clusters and edge point-of-presence (PoP) network hardware.
+
+5. FISCAL YEAR 2026 GUIDANCE AND OUTLOOK
+Management anticipates full-year 2026 total revenue between $515 million and $530 million (approx. 20-24% YoY growth), with Adjusted EBITDA margins expected to sustain between 28% and 31%.

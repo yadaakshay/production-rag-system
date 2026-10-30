@@ -1,0 +1,67 @@
+# Production RAG System Configuration
+
+system:
+  project_name: "production-rag-system"
+  version: "1.0.0"
+  random_seed: 42
+  log_level: "INFO"
+
+storage:
+  data_dir: "data"
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  index_dir: "data/indices"
+  eval_dir: "data/evaluation"
+
+ingestion:
+  chunking_strategy: "recursive"  # options: fixed, recursive, semantic, hierarchical
+  chunk_size: 500                 # target characters per chunk
+  chunk_overlap: 100              # overlapping characters to preserve cross-boundary context
+  separators: ["\n\n", "\n", ". ", "? ", "! ", " ", ""]
+  preserve_headers: true
+
+embeddings:
+  provider: "sentence_transformers"  # options: sentence_transformers, fastembed, openai, mock
+  model_name: "all-MiniLM-L6-v2"     # lightweight (80MB), fast, 384-dimensional
+  dimension: 384
+  batch_size: 32
+  device: "cpu"                      # cpu, cuda, mps
+
+indexing:
+  vector_backend: "in_memory"        # options: in_memory, chroma
+  similarity_metric: "cosine"        # cosine, l2, dot_product
+  bm25:
+    k1: 1.5
+    b: 0.75
+
+retrieval:
+  top_k_retrieval: 10                # candidates fetched from initial search
+  hybrid_mode: "rrf"                 # options: rrf (Reciprocal Rank Fusion), linear
+  rrf_k: 60                          # smoothing constant for RRF
+  dense_weight: 0.7                  # weight for linear combination (0.0 to 1.0)
+  sparse_weight: 0.3
+  
+reranker:
+  enabled: true
+  model_name: "cross-encoder/ms-marco-MiniLM-L-6-v2"
+  top_n: 4                           # final context chunks passed to generator
+
+generation:
+  provider: "mock"                   # options: mock, groq, openai, gemini, ollama
+  model_name: "mock-model"
+  temperature: 0.1
+  max_tokens: 1024
+  query_transformation:
+    enable_hyde: false               # Hypothetical Document Embeddings
+    enable_multi_query: false        # Multi-query expansion
+    enable_router: true              # Intent routing (retrieval vs direct response)
+
+evaluation:
+  sample_size: 20
+  metrics:
+    - "faithfulness"
+    - "answer_relevance"
+    - "context_precision"
+    - "context_recall"
+    - "hit_rate_at_k"
+    - "mrr"
